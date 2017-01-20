@@ -11,4 +11,4 @@ environment:
   - solution_name: Client.SDK/Client.SDK.sln
   - solution_name: Server.SDK/Server.SDK.sln
 build_script:
-	- msbuild %solution_name%
+  - cmd: msbuild %solution_name%
