@@ -1,0 +1,29 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.SDK", "Server.SDK\Server.SDK.csproj", "{B958ECE7-A0D2-400E-A9EB-B9C8E9E82E30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.SDK", "..\Shared.SDK\Shared.SDK.csproj", "{0E516A12-F114-4938-9DFA-329AB215A51E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.SDK.Tests", "Server.SDK.Tests\Server.SDK.Tests.csproj", "{621F54F7-E18C-40A6-8A46-48B29549466E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B958ECE7-A0D2-400E-A9EB-B9C8E9E82E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B958ECE7-A0D2-400E-A9EB-B9C8E9E82E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B958ECE7-A0D2-400E-A9EB-B9C8E9E82E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B958ECE7-A0D2-400E-A9EB-B9C8E9E82E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E516A12-F114-4938-9DFA-329AB215A51E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E516A12-F114-4938-9DFA-329AB215A51E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E516A12-F114-4938-9DFA-329AB215A51E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E516A12-F114-4938-9DFA-329AB215A51E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{621F54F7-E18C-40A6-8A46-48B29549466E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621F54F7-E18C-40A6-8A46-48B29549466E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621F54F7-E18C-40A6-8A46-48B29549466E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621F54F7-E18C-40A6-8A46-48B29549466E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
