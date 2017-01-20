@@ -11,4 +11,5 @@ environment:
   - solution_name: Client.SDK/Client.SDK.sln
   - solution_name: Server.SDK/Server.SDK.sln
 build_script:
+  - cmd: nuget restore %solution_name%
   - cmd: msbuild %solution_name%
