@@ -7,6 +7,7 @@ msbuild /verbosity:minimal $env:solution
 # Determine the actual name of the package.
 $branch = $env:APPVEYOR_REPO_BRANCH
 $pr = $env:APPVEYOR_PULL_REQUEST_NUMBER
+$version = $env:APPVEYOR_BUILD_VERSION
 
 if($pr -ne "") {
    # Do nothing as this is a PR
@@ -15,13 +16,11 @@ if($pr -ne "") {
 
 if($branch -eq "cert") {
     # Set beta version, rather than the production version name.
-    $env:APPVEYOR_BUILD_VERSION += "-beta"
+    $version += "-beta"
 }
 elseif($branch -ne "master") {
    # Must be a dev build.
-   $env:APPVEYOR_BUILD_VERSION += "-dev"
+   $version += "-dev"
 }
 
-# Build nuget package. 
-Write-Host "Packaging nuget with name: $env:APPVEYOR_BUILD_VERSION"
-Write-Host "version=$env:APPVEYOR_BUILD_VERSION"
+nuget pack $env:sdk_csproj -parameters "version=$$version"
