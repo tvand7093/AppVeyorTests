@@ -28,9 +28,6 @@ environment:
     sdk_csproj: Server.SDK/Server.SDK/Server.SDK.csproj
     nuget_name: Server.SDK
 
-nuget:
-  disable_publish_on_pr: true
-
 build_script:
 - ps: "& ci-build.ps1"
 
