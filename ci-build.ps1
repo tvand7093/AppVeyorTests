@@ -1,3 +1,9 @@
+# Restore nuget packages for the solution
+nuget restore $env:solution
+# Build the solution with minimal text output.
+msbuild /verbosity:minimal $env:solution
+
+
 # Determine the actual name of the package.
 $branch = $env:APPVEYOR_REPO_BRANCH
 $pr = $env:APPVEYOR_PULL_REQUEST_NUMBER

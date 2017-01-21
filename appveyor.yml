@@ -1,0 +1,55 @@
+version: 1.0.{build}
+
+pull_requests:
+  do_not_increment_build_number: true
+
+skip_tags: true
+
+configuration: Release
+
+nuget:
+  account_feed: false
+  project_feed: false
+  disable_publish_on_pr: true
+
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+
+environment:
+  matrix:
+  - solution: Client.SDK/Client.SDK.sln
+    sdk_csproj: Client.SDK/Client.SDK/Client.SDK.csproj
+    nuget_name: Client.SDK
+  - solution: Server.SDK/Server.SDK.sln
+    sdk_csproj: Server.SDK/Server.SDK/Server.SDK.csproj
+    nuget_name: Server.SDK
+
+nuget:
+  disable_publish_on_pr: true
+
+build_script:
+- ps: "& ci-build.ps1"
+
+artifacts:
+- path: '*.nupkg'
+  name: Nuget
+
+deploy:
+- provider: NuGet
+  server: https://www.myget.org/F/sonoilmedico/api/v2/package
+  api_key:
+    secure: xxq7h5QnNgFfGAHqN2rZifPv27L7YOZpYKyGMwGDyc8M2+JJ02AG8H49JWZvOSBs
+  skip_symbols: true
+  on:
+    branch: master
+- provider: NuGet
+  server: https://www.myget.org/F/sonoilmedico/api/v2/package
+  api_key:
+    secure: xxq7h5QnNgFfGAHqN2rZifPv27L7YOZpYKyGMwGDyc8M2+JJ02AG8H49JWZvOSBs
+  skip_symobls: true
+  on:
+    branch: cert
