@@ -29,7 +29,7 @@ environment:
     nuget_name: Server.SDK
 
 build_script:
-- ps: "& ci-build.ps1"
+- ps: "& ci/ci-build.ps1"
 
 artifacts:
 - path: '*.nupkg'
