@@ -23,4 +23,4 @@ elseif($branch -ne "master") {
    $version += "-dev"
 }
 
-nuget pack $env:sdk_csproj -parameters "version=$$version"
+nuget pack $env:sdk_csproj -properties "version=$$version"
