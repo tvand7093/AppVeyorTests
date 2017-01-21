@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server.SDK.Tests", "Server.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.SDK.Tests", "Client.SDK\Client.SDK.Tests\Client.SDK.Tests.csproj", "{9C137B9E-4516-4A91-AB0C-4062A84BA85D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CI", "CI", "{6CDA0E5F-41EA-4E74-B6D0-31658FADE919}"
+	ProjectSection(SolutionItems) = preProject
+		Client.SDK\Client.SDK\Client.SDK.nuspec = Client.SDK\Client.SDK\Client.SDK.nuspec
+		Server.SDK\Server.SDK\Server.SDK.nuspec = Server.SDK\Server.SDK\Server.SDK.nuspec
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
