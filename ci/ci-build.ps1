@@ -15,13 +15,13 @@ if($pr -ne "") {
 
 if($branch -eq "cert") {
     # Set beta version, rather than the production version name.
-    $env:nuget_name += "-beta"
+    $env:APPVEYOR_BUILD_VERSION += "-beta"
 }
 elseif($branch -ne "master") {
    # Must be a dev build.
-   $env:nuget_name += "-dev"
+   $env:APPVEYOR_BUILD_VERSION += "-dev"
 }
 
 # Build nuget package. 
-Write-Host "Packaging nuget with name: $env:nuget_name"
-Write-Host "id=$env:nuget_name"
+Write-Host "Packaging nuget with name: $env:APPVEYOR_BUILD_VERSION"
+Write-Host "version=$env:APPVEYOR_BUILD_VERSION"
