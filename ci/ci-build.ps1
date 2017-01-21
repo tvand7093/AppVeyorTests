@@ -9,7 +9,7 @@ $branch = $env:APPVEYOR_REPO_BRANCH
 $pr = $env:APPVEYOR_PULL_REQUEST_NUMBER
 $version = $env:APPVEYOR_BUILD_VERSION
 
-if($pr -ne "") {
+if($pr -ne $null) {
    # Do nothing as this is a PR
    return
 }
